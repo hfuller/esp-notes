@@ -6,13 +6,19 @@ It consists of two halves. The top half provides a light sensor, RGB LED, button
 
 Ignore anyone who tells you this RGB LED is a WS2812/NeoPixel. This is simply not the case. No clue why I keep seeing this "information" out there.
 
-GPIO Connections:
+## GPIO connections
+
 * ESP8266 onboard blue LED: 2, inverted logic
 * RGB LED red: 15
 * RGB LED green: 12
 * RGB LED blue: 13
 * Light sensor: A0
 * Button: 4
+
+## Gotchas
+
+* You can't check your battery voltage out of the box, because A0 is used for the light sensor.
+  * Maybe this can be fixed with some clever jumpers...?
 
 ## Sources
 * https://yoursunny.com/t/2016/WittyCloud-first/
